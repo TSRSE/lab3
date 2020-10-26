@@ -81,7 +81,7 @@ namespace lab3_stack_queue_deck
                     }
                     else
                     {
-                        l_stack_chosen.Text = ($"Выбранный элемент\n: {StackList[0].ElementName}");
+                        l_stack_chosen.Text = ($"Выбранный элемент:\n {StackList[0].ElementName}");
                         b_stack_edit.Enabled = true;
                         tb_stack_edit.Enabled = true;
 
@@ -116,7 +116,7 @@ namespace lab3_stack_queue_deck
                     }
                     else
                     {
-                        l_queue_chosen_el.Text = ($"Выбранный элемент\n: {QueueList[QueueList.Count-1].ElementName}");
+                        l_queue_chosen_el.Text = ($"Выбранный элемент:\n {QueueList[QueueList.Count-1].ElementName}");
                         b_queue_edit.Enabled = true;
                         tb_queue_edit.Enabled = true;
 
@@ -137,13 +137,17 @@ namespace lab3_stack_queue_deck
 
                     try
                     {
+                        
                         tb_deck_edit_frt.Text = DeckList[0].ElementName;
                         tb_deck_edit_sec.Text = DeckList[DeckList.Count - 1].ElementName;
                     }
-                    catch { tb_deck_edit_frt.Text = ""; }
+                    catch { tb_deck_edit_frt.Text = ""; tb_deck_edit_sec.Text = ""; }
 
                     if (DeckList.Count == 0)
                     {
+                        l_el_f.Text = "Нет элементов";
+                        l_el_s.Text = "Нет элементов";
+
                         b_deck_edit_frt.Enabled = false;
                         tb_deck_edit_frt.Enabled = false;
                         b_deck_delet_frt.Enabled = false;
@@ -154,6 +158,9 @@ namespace lab3_stack_queue_deck
                     }
                     else
                     {
+                        l_el_f.Text = ($"Выбранный элемент:\n {DeckList[0].ElementName}");
+                        l_el_s.Text = ($"Выбранный элемент:\n {DeckList[DeckList.Count - 1].ElementName}");
+
                         b_deck_edit_frt.Enabled = true;
                         tb_deck_edit_frt.Enabled = true;
                         b_deck_delet_frt.Enabled = true;
@@ -163,7 +170,7 @@ namespace lab3_stack_queue_deck
                         b_deck_delet_sec.Enabled = true;
                     }
                     
-
+                    
                     toolStripStatusLabel3.Text = ($"Элементов в деке: {DeckList.Count}");
                     break;
                 default:
@@ -251,10 +258,10 @@ namespace lab3_stack_queue_deck
             if (tb_deck_add_frt.Text.Length > 0)
             {
                 if (QueueList.Count == 0)
-                    DeckList.Insert(0, new Deck(tb_deck_add_frt.Text, DeckList.Count + 1));
-                else
                     DeckList.Add(new Deck(tb_deck_add_frt.Text, DeckList.Count + 1));
-
+                else
+                    DeckList.Insert(0, new Deck(tb_deck_add_frt.Text, DeckList.Count + 1));
+                
                 updateList(3);
             }
         }
@@ -285,16 +292,9 @@ namespace lab3_stack_queue_deck
 
         private void b_deck_add_sec_Click(object sender, EventArgs e)
         {
-            if (tb_deck_add_sec.Text.Length > 0)
-            {
-                if (QueueList.Count == 0)
-                    DeckList.Add(new Deck(tb_deck_add_sec.Text, DeckList.Count + 1));
-                else
-                    DeckList.Insert(0, new Deck(tb_deck_add_sec.Text, DeckList.Count + 1));
+            DeckList.Add(new Deck(tb_deck_add_sec.Text, DeckList.Count + 1));
 
-                updateList(3);
-            }
-            
+            updateList(3);   
         }
         private void b_deck_edit_sec_Click(object sender, EventArgs e)
         {

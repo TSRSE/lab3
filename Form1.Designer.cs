@@ -76,6 +76,8 @@
             this.b_deck_add_frt = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.list_deck = new System.Windows.Forms.ListBox();
+            this.l_el_f = new System.Windows.Forms.Label();
+            this.l_el_s = new System.Windows.Forms.Label();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -94,7 +96,7 @@
             this.toolStripStatusLabel1,
             this.toolStripStatusLabel2,
             this.toolStripStatusLabel3});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 389);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 467);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(505, 22);
             this.statusStrip1.SizingGrip = false;
@@ -142,7 +144,7 @@
             // очиститьВсеПоляToolStripMenuItem1
             // 
             this.очиститьВсеПоляToolStripMenuItem1.Name = "очиститьВсеПоляToolStripMenuItem1";
-            this.очиститьВсеПоляToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.очиститьВсеПоляToolStripMenuItem1.Size = new System.Drawing.Size(177, 22);
             this.очиститьВсеПоляToolStripMenuItem1.Text = "Очистить все поля";
             this.очиститьВсеПоляToolStripMenuItem1.Click += new System.EventHandler(this.очиститьВсеПоляToolStripMenuItem1_Click);
             // 
@@ -152,26 +154,26 @@
             this.готовыйПример1ToolStripMenuItem,
             this.готовыйПример2ToolStripMenuItem});
             this.шаблонToolStripMenuItem.Name = "шаблонToolStripMenuItem";
-            this.шаблонToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.шаблонToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.шаблонToolStripMenuItem.Text = "Шаблон";
             // 
             // готовыйПример1ToolStripMenuItem
             // 
             this.готовыйПример1ToolStripMenuItem.Name = "готовыйПример1ToolStripMenuItem";
-            this.готовыйПример1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.готовыйПример1ToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.готовыйПример1ToolStripMenuItem.Text = "Готовый пример 1";
             this.готовыйПример1ToolStripMenuItem.Click += new System.EventHandler(this.готовыйПример1ToolStripMenuItem_Click);
             // 
             // готовыйПример2ToolStripMenuItem
             // 
             this.готовыйПример2ToolStripMenuItem.Name = "готовыйПример2ToolStripMenuItem";
-            this.готовыйПример2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.готовыйПример2ToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.готовыйПример2ToolStripMenuItem.Text = "Готовый пример 2";
             // 
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.выходToolStripMenuItem.Text = "Выход";
             // 
             // tabControl1
@@ -182,7 +184,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 27);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(504, 356);
+            this.tabControl1.Size = new System.Drawing.Size(504, 437);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPage1
@@ -193,7 +195,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(496, 330);
+            this.tabPage1.Size = new System.Drawing.Size(496, 411);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Стек";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -295,7 +297,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(496, 330);
+            this.tabPage2.Size = new System.Drawing.Size(496, 411);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Очередь";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -397,21 +399,22 @@
             this.tabPage3.Controls.Add(this.list_deck);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(496, 330);
+            this.tabPage3.Size = new System.Drawing.Size(496, 411);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Дек";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // gb_last_el
             // 
+            this.gb_last_el.Controls.Add(this.l_el_s);
             this.gb_last_el.Controls.Add(this.tb_deck_edit_sec);
             this.gb_last_el.Controls.Add(this.tb_deck_add_sec);
             this.gb_last_el.Controls.Add(this.b_deck_edit_sec);
             this.gb_last_el.Controls.Add(this.b_deck_delet_sec);
             this.gb_last_el.Controls.Add(this.b_deck_add_sec);
-            this.gb_last_el.Location = new System.Drawing.Point(6, 166);
+            this.gb_last_el.Location = new System.Drawing.Point(3, 215);
             this.gb_last_el.Name = "gb_last_el";
-            this.gb_last_el.Size = new System.Drawing.Size(221, 145);
+            this.gb_last_el.Size = new System.Drawing.Size(221, 184);
             this.gb_last_el.TabIndex = 22;
             this.gb_last_el.TabStop = false;
             this.gb_last_el.Text = "Управление ПОСЛЕДНИМ элементом";
@@ -464,6 +467,7 @@
             // 
             // gb_first_el
             // 
+            this.gb_first_el.Controls.Add(this.l_el_f);
             this.gb_first_el.Controls.Add(this.tb_deck_edit_frt);
             this.gb_first_el.Controls.Add(this.tb_deck_add_frt);
             this.gb_first_el.Controls.Add(this.b_deck_edit_frt);
@@ -471,7 +475,7 @@
             this.gb_first_el.Controls.Add(this.b_deck_add_frt);
             this.gb_first_el.Location = new System.Drawing.Point(6, 15);
             this.gb_first_el.Name = "gb_first_el";
-            this.gb_first_el.Size = new System.Drawing.Size(221, 145);
+            this.gb_first_el.Size = new System.Drawing.Size(221, 184);
             this.gb_first_el.TabIndex = 21;
             this.gb_first_el.TabStop = false;
             this.gb_first_el.Text = "Управление ПЕРВЫМ элементом";
@@ -538,14 +542,32 @@
             this.list_deck.FormattingEnabled = true;
             this.list_deck.Location = new System.Drawing.Point(252, 38);
             this.list_deck.Name = "list_deck";
-            this.list_deck.Size = new System.Drawing.Size(209, 277);
+            this.list_deck.Size = new System.Drawing.Size(209, 355);
             this.list_deck.TabIndex = 17;
+            // 
+            // l_el_f
+            // 
+            this.l_el_f.AutoSize = true;
+            this.l_el_f.Location = new System.Drawing.Point(6, 142);
+            this.l_el_f.Name = "l_el_f";
+            this.l_el_f.Size = new System.Drawing.Size(84, 13);
+            this.l_el_f.TabIndex = 20;
+            this.l_el_f.Text = "Нет элементов";
+            // 
+            // l_el_s
+            // 
+            this.l_el_s.AutoSize = true;
+            this.l_el_s.Location = new System.Drawing.Point(6, 145);
+            this.l_el_s.Name = "l_el_s";
+            this.l_el_s.Size = new System.Drawing.Size(84, 13);
+            this.l_el_s.TabIndex = 21;
+            this.l_el_s.Text = "Нет элементов";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(505, 411);
+            this.ClientSize = new System.Drawing.Size(505, 489);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -628,6 +650,8 @@
         private System.Windows.Forms.Label l_queue_chosen_el;
         private System.Windows.Forms.Label l_stack_chosen;
         private System.Windows.Forms.ToolStripMenuItem очиститьВсеПоляToolStripMenuItem1;
+        private System.Windows.Forms.Label l_el_s;
+        private System.Windows.Forms.Label l_el_f;
     }
 }
 
